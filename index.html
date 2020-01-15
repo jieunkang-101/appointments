@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/scripts.js"></script>
   <title>Appointments</title>
 </head>
+
 <body>
+  
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Success!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Your appointment is booked!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <div class="container-fluid">
     <br>
     <div class="jumbotron">
       <h1>Appointments</h1>
       <h2>Book one today!</h2>
     </div>
-    <form id="book">
-      <input placeholder="Your Name" id="name">
-      <input placeholder="What time would you like your appointment to be?" id="time">
-      <input placeholder="What type of appointment is this?" id="type">
-      <button class="btn btn-default" type="submit">Submit</button>
-    </form>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-default">
+        <form id="book">
+          <p>Please fill out a form to book an appointment.</p>
+          <div class="form-group">
+            <input class="form-control" placeholder="Your Name" id="name">
+          </div>
+          <div class="form-group">
+              <input class="form-control" placeholder="Appt. Date" id="date">
+            </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="Appt. Time" id="time">
+          </div>
+          <div class="form-group">
+            <input class="form-control" placeholder="Appt. Type" id="type">
+          </div>
+
+          <button class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal">Submit</button>
+
+        </form>
+      </div>
+    </div>
+    </div>
   </div>
 </body>
+
 </html>
